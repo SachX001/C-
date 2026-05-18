@@ -595,6 +595,175 @@ This project demonstrates that:
 A solid, readable, and correct Roman numeral conversion implemented from first principles.
 
 
+## 🔢 Unique Number of Occurrences (C++)
+
+A beginner-friendly C++ program that determines whether the frequency of each value in an array is unique.
+
+This project focuses on strengthening STL understanding, optimization thinking, and transitioning from brute-force solutions to smarter approaches using `map` and `set`.
+
+### 🧠 Problem Description
+
+You are given an integer array `arr`
+
+The task:
+
+- Count how many times each number appears
+- Check whether each frequency count is unique
+- Return `true` if all occurrence counts are unique
+- Return `false` otherwise
+
+Example:
+
+Input:
+
+1 2 2 1 1 3
+
+Frequency Count:
+
+1 → 3  
+2 → 2  
+3 → 1  
+
+Since all occurrence values are different:
+
+Output:
+
+true
+
+---
+
+### 🛠️ Concepts Used
+
+✅ Classes & Objects
+
+✅ `vector` usage
+
+✅ `map<int,int>` for frequency counting
+
+✅ `set<int>` for unique occurrence storage
+
+✅ Range-based loops
+
+✅ `stringstream` input handling
+
+✅ STL optimization thinking
+
+---
+
+### 📥 Input Format (Local Testing)
+
+The program reads the input using:
+
+```cpp
+getline()
+stringstream
+```
+
+and stores all integers inside a vector.
+
+---
+
+### 🧱 Code Breakdown
+
+#### 🔹 Solution Class
+
+**Private Logic:**
+
+Create a `map` to store:
+
+```
+number → frequency
+```
+
+Example:
+
+```
+1 → 3
+2 → 2
+3 → 1
+```
+
+Create a `set` to store only unique frequencies:
+
+```
+3
+2
+1
+```
+
+Since sets automatically reject duplicates:
+
+If:
+
+```
+1 → 2
+2 → 2
+```
+
+Set becomes:
+
+```
+{2}
+```
+
+while map size becomes:
+
+```
+2
+```
+
+---
+
+**Public Method:**
+
+```cpp
+uniqueOccurrences(vector<int>& arr)
+```
+
+Steps:
+
+1. Count frequency using `map`
+2. Insert frequency values into `set`
+3. Compare:
+
+```cpp
+freq.size() == data.size()
+```
+
+If sizes match:
+
+```text
+Return true
+```
+
+Else:
+
+```text
+Return false
+```
+
+---
+
+### ⏱️ Time & Space Complexity
+
+#### Time Complexity
+
+```text
+O(n log n)
+```
+
+- Building frequency map → `O(n log n)`
+- Inserting into set → `O(n log n)`
+
+#### Space Complexity
+
+```text
+O(n)
+```
+
+for map and set storage.
+
+
  ## ✌️(More folders will be added as I learn new concepts)
 
 
